@@ -1,6 +1,6 @@
-[![Visitor](https://visitor-badge.laobi.icu/badge?page_id=danrynr.ffmpeg_extract_audio)](https://github.com/danrynr/ffmpeg_extract_audio)
+[![Visitor](https://visitor-badge.laobi.icu/badge?page_id=danrynr.ffmpeg-extract-audio)](https://github.com/danrynr/ffmpeg-extract-audio)
 
-# ffmpeg_extract_audio
+# ffmpeg-extract-audio
 
 A simple shell script to extract audio from video files using ffmpeg.
 
