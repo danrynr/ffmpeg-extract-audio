@@ -10,14 +10,8 @@ process_file() {
     # trimmed_audio_codec="${audio_codec##*( )}"
     trimmed_audio_codec=$(echo "$audio_codec" | tr -cd '[:alnum:]')
 
-    if [ "$trimmed_audio_codec" == "aac" ] || [ "$trimmed_audio_codec" == "opus" ]; then
-        output_extension="$trimmed_audio_codec"
-
-        echo "Detected audio codec: $trimmed_audio_codec"
-    else
-        echo "Unsupported audio codec: $trimmed_audio_codec"
-        return
-    fi
+    echo "Detected audio codec: $trimmed_audio_codec"
+    output_extension="$trimmed_audio_codec"
 
     output_path="$(dirname "$input_file")/$output_filename.${output_extension}"
 
@@ -36,7 +30,7 @@ fi
 # Get the provided input path
 input_path="$1"
 
-# List of most common video format
+# Array of most common video format
 video_extensions=("*.mp4" "*.mkv" "*.ts" "*.avi" "*.mov" "*.flv" "*.wmv" "*.m4v" "*.webm" "*.vob" "*.mpg" "*.mpeg" "*.3gp" "*.ogv")
 
 # Create an array of find options
